@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma de Dos Números</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Calculadora de Suma</h1>
+    <label for="num1">Ingrese el primer número:</label><br>
+    <input type="number" id="num1"><br>
+
+    <label for="num2">Ingrese el segundo número:</label><br>
+    <input type="number" id="num2"><br>
+
+    <button onclick="sumar()">Sumar</button>
+
+    <h2 id="resultado"></h2>
+
+    <script>
+        function sumar() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const suma = num1 + num2;
+            document.getElementById('resultado').innerText = `La suma de ${num1} y ${num2} es: ${suma}`;
+        }
+    </script>
+
+</body>
+</html>
