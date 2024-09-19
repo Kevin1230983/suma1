@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suma de Dos Números</title>
+    <title>Suma de Tres Números</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,6 +23,9 @@
     <label for="num2">Ingrese el segundo número:</label><br>
     <input type="number" id="num2"><br>
 
+    <label for="num3">Ingrese el tercer número:</label><br>
+    <input type="number" id="num3"><br>
+
     <button onclick="sumar()">Sumar</button>
 
     <h2 id="resultado"></h2>
@@ -31,10 +34,21 @@
         function sumar() {
             const num1 = parseFloat(document.getElementById('num1').value);
             const num2 = parseFloat(document.getElementById('num2').value);
-            const suma = num1 + num2;
-            document.getElementById('resultado').innerText = `La suma de ${num1} y ${num2} es: ${suma}`;
+            const num3 = parseFloat(document.getElementById('num3').value);
+            const suma = num1 + num2 + num3;
+            document.getElementById('resultado').innerText = `La suma de ${num1}, ${num2} y ${num3} es: ${suma}`;
         }
     </script>
 
 </body>
 </html>
+
+<!-- cambio que se le hizo es agregar un campo mas  <label for="num3">Ingrese el tercer número:</label><br>
+    <input type="number" id="num3"><br>;-->
+
+    <!--busca el elemento que creamos     const num3 = parseFloat(document.getElementById('num3').value); -->
+
+    <!--suma el tercer campo    const suma = num1 + num2 + num3; -->
+
+      <!--nos da el resultado de los 3 campos  document.getElementById('resultado').innerText = `La suma de ${num1}, ${num2} y ${num3} es: ${suma}`; -->
+
